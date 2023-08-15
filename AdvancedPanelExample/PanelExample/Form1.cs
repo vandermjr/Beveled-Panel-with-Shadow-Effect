@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using BevelPanel;
 
@@ -40,6 +42,26 @@ namespace PanelExample
                 Controls.Add(block);
             }
             ResumeLayout();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            IEnumerable<Block> blocks = Controls.OfType<Block>();
+            foreach (var block in blocks)
+            {
+                block.StartColor = button1.BackColor;
+                block.EndColor = button2.BackColor;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            IEnumerable<Block> blocks = Controls.OfType<Block>();
+            foreach (var block in blocks)
+            {
+                block.StartColor = button3.BackColor;
+                block.EndColor = button4.BackColor;
+            }
         }
     }
 }

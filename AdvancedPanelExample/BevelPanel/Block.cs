@@ -239,11 +239,6 @@ namespace BevelPanel
         {
             var panelRect = new Rectangle();
 
-            if (_shadowShift > 0)
-            {
-                DrawShadow(e.Graphics);
-            }
-
             switch (_shadowStyle)
             {
                 case ShadowMode.ForwardDiagonal:
@@ -391,51 +386,6 @@ namespace BevelPanel
             }
         }
 
-        private void DrawShadow(Graphics graphics)
-        {
-            Rectangle rect = new Rectangle();
-            GraphicsPath path;
-            switch (_shadowStyle)
-            {
-                case ShadowMode.ForwardDiagonal:
-                    rect = new Rectangle(ShadowShift + sh, ShadowShift + sh,
-                                    Width - ShadowShift - sh, Height - ShadowShift - sh);
-                    break;
-                case ShadowMode.Surrounded:
-                    rect = new Rectangle(0, 0, Width, Height);
-                    break;
-                case ShadowMode.Dropped:
-                    rect = new Rectangle(_shadowShift, 0, Width - 2 * _shadowShift, Height);
-                    break;
-            }
-
-            if (_shadowStyle != ShadowMode.Dropped)
-            {
-                path = RoundedRectangle.DrawRoundedRectanglePath(rect, _rectRadius);
-            }
-            else
-            {
-                path = RoundedRectangle.DrawRoundedRectanglePath(rect, _rectRadius, true);
-            }
-
-            using (PathGradientBrush shadowBrush = new PathGradientBrush(path))
-            {
-                shadowBrush.CenterPoint = new PointF(rect.Width / 2,
-                    rect.Height / 2);
-
-                // Set the color along the entire boundary 
-                Color[] color = { Color.Transparent };
-                shadowBrush.SurroundColors = color;
-
-                // Set the center color 
-                shadowBrush.CenterColor = _shadowColor;
-                graphics.FillPath(shadowBrush, path);
-
-                shadowBrush.FocusScales = new PointF(0.95f, 0.85f);
-                graphics.FillPath(shadowBrush, path);
-
-            }
-        }
         #endregion
     }
 }

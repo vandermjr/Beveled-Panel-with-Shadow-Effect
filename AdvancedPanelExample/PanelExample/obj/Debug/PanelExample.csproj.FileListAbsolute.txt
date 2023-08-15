@@ -20,3 +20,15 @@ C:\Users\yjuhno\Desktop\Article_AdvancedPanel\AdvancedPanelExample\AdvancedPanel
 C:\Users\yjuhno\Desktop\Article_AdvancedPanel\AdvancedPanelExample\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.csproj.GenerateResource.Cache
 C:\Users\yjuhno\Desktop\Article_AdvancedPanel\AdvancedPanelExample\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.exe
 C:\Users\yjuhno\Desktop\Article_AdvancedPanel\AdvancedPanelExample\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.pdb
+C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\bin\Debug\PanelExample.exe
+C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\bin\Debug\PanelExample.pdb
+C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\bin\Debug\BevelPanel.dll
+C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\bin\Debug\BevelPanel.pdb
+C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.csproj.AssemblyReference.cache
+C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.Form1.resources
+C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.Properties.Resources.resources
+C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.csproj.GenerateResource.cache
+C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.csproj.CoreCompileInputs.cache
+C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.csproj.CopyComplete
+C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.exe
+C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.pdb

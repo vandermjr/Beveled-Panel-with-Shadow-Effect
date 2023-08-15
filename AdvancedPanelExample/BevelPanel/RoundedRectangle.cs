@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
 
 namespace BevelPanel
 {
@@ -13,7 +9,7 @@ namespace BevelPanel
         public static GraphicsPath DrawRoundedRectanglePath(Rectangle rect,
                                           int radius)
         {
-            return DrawRoundedRectanglePath(rect,radius,false);
+            return DrawRoundedRectanglePath(rect, radius, false);
         }
 
         public static GraphicsPath DrawRoundedRectanglePath(Rectangle rect,

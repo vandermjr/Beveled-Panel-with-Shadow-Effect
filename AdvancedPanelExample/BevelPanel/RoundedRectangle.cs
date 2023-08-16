@@ -5,15 +5,12 @@ namespace BevelPanel
 {
     public class RoundedRectangle
     {
-
-        public static GraphicsPath DrawRoundedRectanglePath(Rectangle rect,
-                                          int radius)
+        public static GraphicsPath DrawRoundedRectanglePath(Rectangle rect, int radius)
         {
             return DrawRoundedRectanglePath(rect, radius, false);
         }
 
-        public static GraphicsPath DrawRoundedRectanglePath(Rectangle rect,
-            int radius, bool dropStyle)
+        public static GraphicsPath DrawRoundedRectanglePath(Rectangle rect, int radius, bool dropStyle)
         {
             int x = rect.X;
             int y = rect.Y;
@@ -62,17 +59,15 @@ namespace BevelPanel
             //Bottom Edge
             if (dropStyle)
             {
-                p.AddBezier(
-                    new Point(xwr, yh),
-                    new Point(xw2, yh10),
-                    new Point(xw2, yh10),
-                    new Point(xr, yh));
+                p.AddBezier(new Point(xwr, yh),
+                            new Point(xw2, yh10),
+                            new Point(xw2, yh10),
+                            new Point(xr, yh));
             }
             else
             {
                 p.AddLine(xwr, yh, xr, yh);
             }
-
 
             //Bottom Left Corner
             if (r2 > 0)
@@ -83,17 +78,11 @@ namespace BevelPanel
             //Left Edge
             p.AddLine(x, yhr, x, yr);
 
-
             p.CloseFigure();
             return p;
         }
 
-
-
-
-
-        public static GraphicsPath DrawFilledRoundedRectangle(Graphics graphics, Brush rectBrush, Rectangle rect,
-                                  int radius)
+        public static GraphicsPath DrawFilledRoundedRectangle(Graphics graphics, Brush rectBrush, Rectangle rect, int radius)
         {
             GraphicsPath path = DrawRoundedRectanglePath(rect, radius);
             SmoothingMode mode = graphics.SmoothingMode;
@@ -103,9 +92,7 @@ namespace BevelPanel
             return path;
         }
 
-
-        public static GraphicsPath DrawRoundedRectangle(Graphics graphics, Pen pen, Rectangle rect,
-                          int radius)
+        public static GraphicsPath DrawRoundedRectangle(Graphics graphics, Pen pen, Rectangle rect, int radius)
         {
             GraphicsPath path = DrawRoundedRectanglePath(rect, radius);
             SmoothingMode mode = graphics.SmoothingMode;
@@ -114,8 +101,5 @@ namespace BevelPanel
             graphics.SmoothingMode = mode;
             return path;
         }
-
-
-
     }
 }

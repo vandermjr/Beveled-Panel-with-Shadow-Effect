@@ -12,24 +12,8 @@ namespace BevelPanel
         /// <summary>Panel border style.</summary>
         public enum BevelStyle
         {
-            /// <summary>Lowered border.</summary>
-            Lowered,
             /// <summary>Raised border.</summary>
             Raised,
-            /// <summary>Thin border.</summary>
-            Flat
-        }
-
-        public enum ShadowMode
-        {
-            /// <summary>Specifies a shodow from upper left to lower right.</summary>
-            ForwardDiagonal = 0,
-
-            /// <summary>Specifies a surrounded shadow.</summary>
-            Surrounded = 1,
-
-            /// <summary>Specifies a dropped shadow.</summary>
-            Dropped = 2
         }
 
         public enum PanelGradientMode
@@ -47,43 +31,19 @@ namespace BevelPanel
             Vertical = 1
         }
 
-        Color _startColor = Color.DimGray;
-        Color _endColor = Color.DarkGray;
+        private Color _startColor = Color.DimGray;
+        private Color _endColor = Color.DarkGray;
         private Color _borderColor = Color.FromArgb(102, 102, 102);
         private Color mainColor;
 
-
         private int _rectRadius = 5;
         private PanelGradientMode _backgroundGradientMode = PanelGradientMode.Vertical;
-        private int _shadowShift = 0;
-        private Color _shadowColor = Color.DimGray;
         private const int sh = 10;
         private int _edgeWidth = 2;
 
         private Color edgeColor1;
         private Color edgeColor2;
-        private BevelStyle _style = BevelStyle.Flat;
-        private ShadowMode _shadowStyle = ShadowMode.ForwardDiagonal;
-
-
-
-        /// <summary>
-        /// Gets or sets the style of the shadow.
-        /// </summary>
-        [Browsable(true), Category("AdvancedPanel"), Description("Style of the shadow.")]
-        public ShadowMode ShadowStyle
-        {
-            get
-            {
-                return _shadowStyle;
-            }
-            set
-            {
-                _shadowStyle = value;
-                Invalidate();
-            }
-        }
-
+        private BevelStyle _style = BevelStyle.Raised;
 
         /// <summary>
         /// The width of an edge
@@ -91,10 +51,7 @@ namespace BevelPanel
         [Browsable(true), Category("AdvancedPanel"), Description("The width of an edge.")]
         public int EdgeWidth
         {
-            get
-            {
-                return _edgeWidth;
-            }
+            get => _edgeWidth;
             set
             {
                 _edgeWidth = value;
@@ -109,10 +66,7 @@ namespace BevelPanel
         [Browsable(true), Category("AdvancedPanel"), Description("The style of the bevel.")]
         public BevelStyle Style
         {
-            get
-            {
-                return _style;
-            }
+            get => _style;
             set
             {
                 _style = value;
@@ -126,7 +80,7 @@ namespace BevelPanel
         [Browsable(true), Category("AdvancedPanel"), Description("The begin gradient color.")]
         public Color StartColor
         {
-            get { return _startColor; }
+            get => _startColor;
             set
             {
                 _startColor = value;
@@ -140,38 +94,10 @@ namespace BevelPanel
         [Browsable(true), Category("AdvancedPanel"), Description("The end gradient color.")]
         public Color EndColor
         {
-            get { return _endColor; }
+            get => _endColor;
             set
             {
                 _endColor = value;
-                Invalidate();
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the shadow shift
-        /// </summary>
-        [Browsable(true), Category("AdvancedPanel"), Description("The shadow shift.")]
-        public int ShadowShift
-        {
-            get { return _shadowShift; }
-            set
-            {
-                _shadowShift = value;
-                Invalidate();
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the shadow color
-        /// </summary>
-        [Browsable(true), Category("AdvancedPanel"), Description("The shadow color.")]
-        public Color ShadowColor
-        {
-            get { return _shadowColor; }
-            set
-            {
-                _shadowColor = value;
                 Invalidate();
             }
         }
@@ -182,7 +108,7 @@ namespace BevelPanel
         [Browsable(true), Category("AdvancedPanel"), Description("The flat border color.")]
         public Color FlatBorderColor
         {
-            get { return _borderColor; }
+            get => _borderColor;
             set
             {
                 _borderColor = value;
@@ -197,7 +123,7 @@ namespace BevelPanel
         [Browsable(true), Category("AdvancedPanel"), Description("The gradient type.")]
         public PanelGradientMode BackgroundGradientMode
         {
-            get { return _backgroundGradientMode; }
+            get => _backgroundGradientMode;
             set
             {
                 _backgroundGradientMode = value;
@@ -211,7 +137,7 @@ namespace BevelPanel
         [Browsable(true), Category("AdvancedPanel"), Description("The corner round radius.")]
         public int RectRadius
         {
-            get { return _rectRadius; }
+            get => _rectRadius;
             set
             {
                 _rectRadius = value;
@@ -239,78 +165,12 @@ namespace BevelPanel
         {
             var panelRect = new Rectangle();
 
-            switch (_shadowStyle)
-            {
-                case ShadowMode.ForwardDiagonal:
-
-                    panelRect = new Rectangle(
-                        0,
-                        0,
-                        Width - _shadowShift - 1,
-                        Height - _shadowShift - 1);
-
-                    break;
-                case ShadowMode.Surrounded:
-                    panelRect = new Rectangle(ShadowShift,
-                    _shadowShift + _edgeWidth,
-                    Width - (2 * ShadowShift) - 1,
-                    Height - (2 * ShadowShift) - 1);
-                    break;
-                case ShadowMode.Dropped:
-                    panelRect = new Rectangle(0,
-                    0,
-                    Width - 1,
-                    Height - (2 * ShadowShift) - 1);
-                    break;
-            }
-
             // Draws the Panel
             switch (Style)
             {
-                case BevelStyle.Flat:
-
-                    DrawRect(e.Graphics, panelRect);
-                    break;
-                case BevelStyle.Lowered:
-                    DrawRectLowered(e.Graphics, panelRect);
-                    break;
                 case BevelStyle.Raised:
                     DrawRectRaised(e.Graphics, panelRect);
                     break;
-            }
-        }
-
-        private void DrawRectLowered(Graphics graphics, Rectangle rect)
-        {
-            var darknessEnd = _endColor.GetSaturation();
-            var darknessBegin = _startColor.GetSaturation();
-            mainColor = darknessEnd <= darknessBegin ? _endColor : _startColor;
-
-            edgeColor1 = ControlPaint.Dark(mainColor);
-            edgeColor2 = ControlPaint.Light(mainColor);
-
-            DrawEdges(graphics, ref rect);
-            rect.Inflate(-_edgeWidth, -_edgeWidth);
-            DrawPanelStyled(graphics, rect);
-        }
-
-        private void DrawRect(Graphics graphics, Rectangle rect)
-        {
-            // Border rectangle
-            using (Brush backgroundGradientBrush = new SolidBrush(_borderColor))
-            {
-                RoundedRectangle.DrawFilledRoundedRectangle(graphics, backgroundGradientBrush,
-                    rect, _rectRadius);
-            }
-
-            rect.Inflate(-_edgeWidth, -_edgeWidth);
-
-            // Panel main rectangle
-            using (Brush backgroundGradientBrush = new LinearGradientBrush(
-                rect, _startColor, _endColor, (LinearGradientMode)this.BackgroundGradientMode))
-            {
-                RoundedRectangle.DrawFilledRoundedRectangle(graphics, backgroundGradientBrush,
-                    rect, _rectRadius);
             }
         }
 
@@ -350,12 +210,6 @@ namespace BevelPanel
             {
                 switch (Style)
                 {
-                    case BevelStyle.Lowered:
-                        edgeBlend.Positions = new float[] { 0.0f, .49f, .52f, 1.0f };
-                        edgeBlend.Factors = new float[] { .0f, .6f, .99f, 1f };
-
-
-                        break;
                     case BevelStyle.Raised:
                         edgeBlend.Positions = new float[] { 0.0f, .45f, .51f, 1.0f };
                         edgeBlend.Factors = new float[] { .0f, .0f, .2f, 1f };
@@ -363,9 +217,9 @@ namespace BevelPanel
                 }
             }
             using (var edgeBrush = new LinearGradientBrush(lgbRect,
-                                                edgeColor1,
-                                                edgeColor2,
-                                                LinearGradientMode.ForwardDiagonal))
+                                                           edgeColor1,
+                                                           edgeColor2,
+                                                           LinearGradientMode.ForwardDiagonal))
             {
                 edgeBrush.Blend = edgeBlend;
                 RoundedRectangle.DrawFilledRoundedRectangle(g, edgeBrush, edgeRect, _rectRadius);
@@ -379,8 +233,10 @@ namespace BevelPanel
         /// <param name="rect">Rectangle defining the panel top</param>
         protected virtual void DrawPanelStyled(Graphics g, Rectangle rect)
         {
-            using (Brush pgb = new LinearGradientBrush(rect, _startColor, _endColor,
-                (LinearGradientMode)this.BackgroundGradientMode))
+            using (Brush pgb = new LinearGradientBrush(rect,
+                                                       _startColor,
+                                                       _endColor,
+                                                       (LinearGradientMode)this.BackgroundGradientMode))
             {
                 RoundedRectangle.DrawFilledRoundedRectangle(g, pgb, rect, _rectRadius);
             }

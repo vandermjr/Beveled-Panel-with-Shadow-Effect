@@ -19,3 +19,9 @@ C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelEx
 C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\BevelPanel\obj\Debug\BevelPanel.csproj.CoreCompileInputs.cache
 C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\BevelPanel\obj\Debug\BevelPanel.dll
 C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\BevelPanel\obj\Debug\BevelPanel.pdb
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\BevelPanel\bin\Debug\BevelPanel.dll
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\BevelPanel\bin\Debug\BevelPanel.pdb
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\BevelPanel\obj\Debug\BevelPanel.csproj.AssemblyReference.cache
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\BevelPanel\obj\Debug\BevelPanel.csproj.CoreCompileInputs.cache
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\BevelPanel\obj\Debug\BevelPanel.dll
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\BevelPanel\obj\Debug\BevelPanel.pdb

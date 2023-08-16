@@ -32,3 +32,15 @@ C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelEx
 C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.csproj.CopyComplete
 C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.exe
 C:\Users\Macrotech\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.pdb
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\bin\Debug\PanelExample.exe
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\bin\Debug\PanelExample.pdb
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\bin\Debug\BevelPanel.dll
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\bin\Debug\BevelPanel.pdb
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.csproj.AssemblyReference.cache
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.Form1.resources
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.Properties.Resources.resources
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.csproj.GenerateResource.cache
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.csproj.CoreCompileInputs.cache
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.csproj.CopyComplete
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.exe
+C:\Users\USER\Source\Repos\Beveled-Panel-with-Shadow-Effect\AdvancedPanelExample\PanelExample\obj\Debug\PanelExample.pdb

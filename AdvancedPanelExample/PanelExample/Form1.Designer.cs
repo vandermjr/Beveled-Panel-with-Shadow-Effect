@@ -34,9 +34,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.block1 = new BevelPanel.Block();
-            this.block2 = new BevelPanel.Block();
-            this.block3 = new BevelPanel.Block();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -105,57 +102,12 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Theme 2";
             // 
-            // block1
-            // 
-            this.block1.BackgroundGradientMode = BevelPanel.Block.PanelGradientMode.Vertical;
-            this.block1.EdgeWidth = 2;
-            this.block1.EndColor = System.Drawing.Color.DarkGray;
-            this.block1.FlatBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.block1.Location = new System.Drawing.Point(316, 188);
-            this.block1.Name = "block1";
-            this.block1.RectRadius = 5;
-            this.block1.Size = new System.Drawing.Size(50, 50);
-            this.block1.StartColor = System.Drawing.Color.DimGray;
-            this.block1.Style = BevelPanel.Block.BevelStyle.Raised;
-            this.block1.TabIndex = 3;
-            // 
-            // block2
-            // 
-            this.block2.BackgroundGradientMode = BevelPanel.Block.PanelGradientMode.Vertical;
-            this.block2.EdgeWidth = 2;
-            this.block2.EndColor = System.Drawing.Color.DarkGray;
-            this.block2.FlatBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.block2.Location = new System.Drawing.Point(316, 244);
-            this.block2.Name = "block2";
-            this.block2.RectRadius = 5;
-            this.block2.Size = new System.Drawing.Size(50, 50);
-            this.block2.StartColor = System.Drawing.Color.DimGray;
-            this.block2.Style = BevelPanel.Block.BevelStyle.Raised;
-            this.block2.TabIndex = 3;
-            // 
-            // block3
-            // 
-            this.block3.BackgroundGradientMode = BevelPanel.Block.PanelGradientMode.Vertical;
-            this.block3.EdgeWidth = 2;
-            this.block3.EndColor = System.Drawing.Color.DarkGray;
-            this.block3.FlatBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.block3.Location = new System.Drawing.Point(316, 132);
-            this.block3.Name = "block3";
-            this.block3.RectRadius = 5;
-            this.block3.Size = new System.Drawing.Size(50, 50);
-            this.block3.StartColor = System.Drawing.Color.DimGray;
-            this.block3.Style = BevelPanel.Block.BevelStyle.Raised;
-            this.block3.TabIndex = 3;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(405, 342);
-            this.Controls.Add(this.block3);
-            this.Controls.Add(this.block2);
-            this.Controls.Add(this.block1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -175,9 +127,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private BevelPanel.Block block1;
-        private BevelPanel.Block block2;
-        private BevelPanel.Block block3;
     }
 }
 

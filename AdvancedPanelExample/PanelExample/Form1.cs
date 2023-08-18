@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Printing;
+using System.Drawing.Text;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 using BevelPanel;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PanelExample
 {
@@ -38,7 +43,8 @@ namespace PanelExample
                 Block block = new Block
                 {
                     Location = location,
-                };
+                    BlockText = pos.ToString()
+                };                
                 Controls.Add(block);
             }
             ResumeLayout();
